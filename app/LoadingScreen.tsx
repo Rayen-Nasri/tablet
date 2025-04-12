@@ -38,7 +38,7 @@ export const LoadingScreen = ({ children }: LoadingScreenProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 6000);
 
     return () => clearTimeout(timer);
   }, []);
