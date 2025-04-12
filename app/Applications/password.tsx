@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { X, Eye, EyeOff, Check, AlertCircle } from "lucide-react";
+import { X,  Check, AlertCircle } from "lucide-react";
 
 interface PasswordProps {
     setActiveApp: (app: 'Settings' | 'Messages' | 'App Store' | 'Photos' | 'Flappy Bird' | 'Notes' | 'Password' | 'Wallpaper' | null) => void;

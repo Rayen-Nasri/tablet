@@ -55,7 +55,6 @@ export default function Game() {
     scale: 1,
   });
 
-  const gameLoopRef = useRef<number>(null);
   const lastTimeRef = useRef<number>(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
