@@ -55,7 +55,7 @@ export const LoadingScreen = ({ children }: LoadingScreenProps) => {
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  const SelectedComponent : any = selectedComponent;
+  const SelectedComponent : WallpaperComponent = selectedComponent;
 
   return (
     <AnimatePresence mode="wait">

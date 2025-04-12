@@ -294,7 +294,7 @@ export default function Game() {
       const digitWidth = 40;
       const digitHeight = 40;
       const scoreWidth = scoreStr.length * digitWidth;
-      let scoreX = (canvas.width - scoreWidth) / 2;
+      const scoreX = (canvas.width - scoreWidth) / 2;
       const scoreY = canvas.height * 0.1;
 
       for (let i = 0; i < scoreStr.length; i++) {
@@ -335,7 +335,7 @@ export default function Game() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [handleClick]);
+  }, [handleClick, fallingAnimation.rotation, fallingAnimation.scale]);
 
   const lerp = (start: number, end: number, amount: number) => {
     return start + (end - start) * amount;

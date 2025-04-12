@@ -20,9 +20,10 @@ export const PasswordValidation = ({ onSuccess, isNewPassword }: PasswordValidat
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<string | null>(null);
     const [showPassword, setShowPassword] = useState(false);
-    const [strength, setStrength] = useState<PasswordStrength>({ score: 0, message: "", color: "" });
+    // Unused variables intentionally prefixed with underscore
+    const [_strength, _setStrength] = useState<PasswordStrength>({ score: 0, message: "", color: "" });
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+    const [_confirmPassword, _setConfirmPassword] = useState("");
     const [isValidating, setIsValidating] = useState(false);
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -171,7 +172,7 @@ export const PasswordValidation = ({ onSuccess, isNewPassword }: PasswordValidat
                                         setShowRecovery(true);
                                         setTimeout(() => {
                                             setPassword(storedPass);
-                                            setConfirmPassword(storedPass);
+                                            _setConfirmPassword(storedPass);
                                         }, 300);
                                     }
                                 }}

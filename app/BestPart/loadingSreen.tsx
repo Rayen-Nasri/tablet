@@ -65,7 +65,7 @@ export const IpadLoadingScreen = ({ children }: { children: React.ReactNode }) =
     setPasswordValidated(true);
   };
 
-  const SelectedComponent: any = selectedComponent;
+  const SelectedComponent : WallpaperComponent = selectedComponent;
 
   return (
     <div className="relative ">
