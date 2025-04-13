@@ -27,10 +27,10 @@ export const IpadLoadingScreen = ({ children }: { children: React.ReactNode }) =
   const [selectedComponent, setSelectedComponent] = useState<WallpaperComponent>(() => {
     if (typeof window !== 'undefined') {
       const savedId = localStorage.getItem('selectedLoadingScreen');
-      const id = savedId ? parseInt(savedId) : 1;
-      return wallpapers.find(w => w.id === id)?.component || Wallpaper1;
+      const id = savedId ? parseInt(savedId) : 2;
+      return wallpapers.find(w => w.id === id)?.component || Wallpaper2;
     }
-    return Wallpaper1;
+    return Wallpaper2;
   });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const IpadLoadingScreen = ({ children }: { children: React.ReactNode }) =
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 6000);
 
     return () => {
       clearTimeout(timer);
@@ -52,8 +52,8 @@ export const IpadLoadingScreen = ({ children }: { children: React.ReactNode }) =
   useEffect(() => {
     const handleStorageChange = () => {
       const savedId = localStorage.getItem('selectedLoadingScreen');
-      const id = savedId ? parseInt(savedId) : 1;
-      const Component = wallpapers.find(w => w.id === id)?.component || Wallpaper1;
+      const id = savedId ? parseInt(savedId) : 2;
+      const Component = wallpapers.find(w => w.id === id)?.component || Wallpaper2;
       setSelectedComponent(Component);
     };
 
